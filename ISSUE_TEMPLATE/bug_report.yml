@@ -1,0 +1,78 @@
+name: Bug report
+description: Report a defect in a SpawnLake repository or `boid-*` image.
+title: "bug: <short summary>"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill in as much of the
+        following as you can — it dramatically speeds up triage.
+
+        For security issues, do **not** use this form. See
+        [SECURITY.md](https://github.com/spawnlake/.github/blob/main/SECURITY.md).
+
+  - type: input
+    id: repo
+    attributes:
+      label: Affected repository / image
+      placeholder: e.g. boid-postgres, spawnlake-api, …
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / tag / commit
+      placeholder: e.g. v0.3.1, dev@a1b2c3d, image tag 16-bookworm
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the actual behaviour, including any error messages or logs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal, copy-pasteable steps. Include `docker run` / `compose` / API calls as relevant.
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, runtime versions, container engine, anything else relevant.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / output
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and didn't find a duplicate.
+          required: true
+        - label: This is not a security vulnerability (those go to security@spawnlake.com).
+          required: true

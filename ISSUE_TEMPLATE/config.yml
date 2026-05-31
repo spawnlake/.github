@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or discussion
+    url: https://github.com/orgs/spawnlake/discussions
+    about: Ask questions, share what you built, or discuss design ideas.
+  - name: Security vulnerability
+    url: https://github.com/spawnlake/.github/blob/main/SECURITY.md
+    about: Please follow the security policy — do not open a public issue.
+  - name: Documentation
+    url: https://docs.spawnlake.com
+    about: Read the product documentation.
